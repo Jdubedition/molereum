@@ -11,6 +11,12 @@ Molereum will add a block every five seconds, which is about two to three times 
 
 It is used during the development of DApps built by the [Jdubedition Github](https://github.com/Jdubedition) account.  In the future, a faucet might be added to the network to allow others to easily access the network to test their DApps.
 
+## Sending MOLE to accounts
+* SSH into the network host VM
+* Attach to signer node `geth attach data-signer/geth.ipc`
+* Transfer from signer account to wallet account `eth.sendTransaction({from: eth.coinbase, to: "<<supply account hash from wallet>>", value: web3.toWei(1, "ether")})`
+* Verify that MOLE is now in the account in the wallet or by running `web3.fromWei(eth.getBalance("<<supply account hash from wallet>>"), "ether")`
+
 ## Steps used to create Molereum
 * Setup this repository on GitHub
 * Setup VM
