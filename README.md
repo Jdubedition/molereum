@@ -4,6 +4,8 @@
 
 Network/Chain ID: 6022140761023
 
+Registered on: [Chainlist](https://chainlist.org/)
+
 ## Features
 Molereum is an Ethereum-based (go-ethereum node implementation) private network that uses PoA (Proof of Authority) Clique consensus and is used to operate DApps (decentralized applications).
 
