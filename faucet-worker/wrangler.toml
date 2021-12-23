@@ -6,6 +6,14 @@ route = ""
 workers_dev = true
 compatibility_date = "2021-12-21"
 
+# Needs to be added to ./src/bindings.d.ts as well
+[vars]
+MOLE_JSON_RPC_URL="https://molereum.jdubedition.com"
+
+# Needs to be added to ./src/bindings.d.ts as well as wrangler secrets put ENV_VAR then enter secret value
+# [secrets]
+# FAUCET_ACCOUNT_PRIVATE_KEY
+
 [build]
 command = "npm install && npm run build"
 [build.upload]
