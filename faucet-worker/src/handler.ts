@@ -14,7 +14,6 @@ export async function handleRequest(request: Request): Promise<Response> {
     return new Response(`Welcome to the Molereum Faucet!`)
   } else if (match !== null) {
     const provider = new ethers.providers.JsonRpcProvider(MOLE_JSON_RPC_URL)
-    const blockNumber = provider.getBlockNumber()
     const wallet = new ethers.Wallet(FAUCET_ACCOUNT_PRIVATE_KEY, provider)
     const tx = wallet.sendTransaction({
       to: match[1],
