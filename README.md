@@ -119,3 +119,12 @@ It is used during the development of DApps built by the [Jdubedition Github](htt
   * Update `wrangler.toml` with environment variables and list secrets
   * Add secrets to Cloudflare Workers that were listed in previous step by running: `wrangler secret put <<SECRET NAME>>` (e.g. `wrangler secret put FAUCET_ACCOUNT_PRIVATE_KEY` for the giver account )
   * Modify handler.ts to process requests and send MOLE from giver account to requester account
+  * Publish faucet-worker to Cloudflare Workers: `wrangler publish`
+* Create faucet-client using [Cloudflare Pages](https://pages.cloudflare.com/)
+  * Create template client app: `yarn create react-app faucet-client --template typescript`
+  * Make adjustments to `tsconfig.json` per [Material UI](https://mui.com/) instructions: `https://mui.com/guides/typescript/`
+  * Add Material UI as a dependency: `yarn add @mui/material @mui/styled-engine-sc styled-components`
+  * Make other adjustments per Material UI instructions: `https://mui.com/getting-started/installation/`
+  * Add dependencies for system preference of theme mode: `yarn add @emotion/react @emotion/styled`
+  * Setup Material UI theme [system preference](https://mui.com/customization/dark-mode/#system-preference)
+  * Setup CloudFlare Pages to deploy this app

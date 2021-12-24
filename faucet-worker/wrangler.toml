@@ -1,10 +1,10 @@
 name = "faucet-worker"
 type = "javascript"
-zone_id = ""
-account_id = ""
-route = ""
 workers_dev = true
 compatibility_date = "2021-12-21"
+account_id = "7ce043ca8368ddfe7a60f4ffddf4b638"
+zone_id = ""
+route = ""
 
 # Needs to be added to ./src/bindings.d.ts as well
 [vars]
