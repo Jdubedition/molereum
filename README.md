@@ -11,7 +11,9 @@ Molereum is an Ethereum-based (go-ethereum node implementation) private network 
 
 Molereum will add a block every five seconds, which is about two to three times faster than Ethereum.
 
-It is used during the development of DApps built by the [Jdubedition Github](https://github.com/Jdubedition) account.  In the future, a faucet might be added to the network to allow others to easily access the network to test their DApps.
+It is used during the development of DApps built by the [Jdubedition Github](https://github.com/Jdubedition) account.
+
+If you are interested in using Molereum, you may use the faucet to get some MOLE: [https://faucet.jdubedition.com/](https://faucet.jdubedition.com/)
 
 ## Sending MOLE to accounts
 * SSH into the network host VM
