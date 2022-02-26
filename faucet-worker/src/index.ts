@@ -46,7 +46,7 @@ addEventListener('fetch', (event) => {
   const url = new URL(request.url)
 
   if (url.pathname === "/") {
-    return new Response(`Welcome to the Molereum Faucet!`)
+    return new Response(`Welcome to the Molereum Faucet!`, { status: 200, headers: corsHeaders })
   } else if (url.pathname.startsWith('/send/')) {
     if (request.method === "OPTIONS") {
       // Handle CORS preflight requests
@@ -65,6 +65,7 @@ addEventListener('fetch', (event) => {
         new Response(null, {
           status: 405,
           statusText: "Method Not Allowed",
+          headers: corsHeaders,
         }),
       )
     }
@@ -74,6 +75,7 @@ addEventListener('fetch', (event) => {
       new Response(null, {
         status: 404,
         statusText: "Nothing to see here.",
+        headers: corsHeaders,
       }),
     )
   }
